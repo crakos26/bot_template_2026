@@ -22,7 +22,7 @@ Template for A discord bot connected to twitch api .
 - `PANEL_PASSWORD`  : web pannel acces
 - `TWITCH_BOT_TOKEN`  : Twitch Token Generator
 - `TWITCH_BOT_USERNAME` : Twitch accounst username *if your using an acount to write in chat*
-- `TWITCH_CHANNEL` : Twitch chanel your trying to watch , obtainable @ https://www.twitch.tv/**YOUR_ID**
+- `TWITCH_CHANNEL` : Twitch chanel your trying to watch , obtainable @ twitch.tv/**YOUR_ID**
 - `TWITCH_CLIENT_ID` :  client Tw
 - `TWITCH_CLIENT_SECRET` : your secret need to be generated on dev_twitch
 - `RELAY_NOTIFICATIONS` : = true *if you want to also watch for later*
