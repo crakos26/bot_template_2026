@@ -12,6 +12,7 @@ Template for A discord bot connected to twitch api .
 - `public/index` : webpages de l'application
 - `/bot.js` : bot code
 - `/package.json` :
+- package.json
 
 
 ### Render Environment / varribale  
