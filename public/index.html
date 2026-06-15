@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stream Panel</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0e0e10;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .panel { width: 100%; max-width: 460px; display: flex; flex-direction: column; gap: 16px; }
+    h1 { color: #efeff1; font-size: 1.1rem; font-weight: 600; text-align: center; letter-spacing: 0.02em; }
+    .card { background: #18181b; border-radius: 12px; padding: 1.5rem; border: 1px solid #2a2a2e; }
+    .card-title { color: #adadb8; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem; }
+    .preview { width: 100%; border-radius: 8px; margin-bottom: 1.25rem; border: 1px solid #2a2a2e; }
+
+    .btn { width: 100%; border: none; border-radius: 8px; padding: 12px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.15s, transform 0.1s; color: white; }
+    .btn:active { transform: scale(0.98); }
+    .btn:disabled { background: #3a3a3d !important; color: #6e6e7a; cursor: not-allowed; transform: none; }
+    .btn-red { background: #9147ff; }
+    .btn-red:hover:not(:disabled) { background: #772ce8; }
+    .btn-orange { background: #f97316; }
+    .btn-orange:hover:not(:disabled) { background: #ea6c0a; }
+    .btn-blue { background: #3b82f6; }
+    .btn-blue:hover:not(:disabled) { background: #2563eb; }
+    .btn-sm { padding: 10px 16px; white-space: nowrap; border-radius: 8px; font-size: 0.9rem; flex-shrink: 0; }
+
+    input, textarea {
+      background: #0e0e10; border: 1px solid #3a3a3d; border-radius: 8px;
+      padding: 10px 12px; font-size: 0.9rem; color: #efeff1; width: 100%;
+    }
+
+    /* LOGIN */
+    #login-screen {
+      position: fixed;
+      inset: 0;
+      background: #0e0e10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 9999;
+    }
+
+    #login-screen h2 { color: white; }
+    #login-error { color: #f87171; font-size: 0.85rem; }
+  </style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="login-screen">
+  <h2>🔐 Accès protégé</h2>
+  <input id="password" type="password" placeholder="Mot de passe" />
+  <button onclick="checkPassword()" class="btn btn-blue">Entrer</button>
+  <p id="login-error"></p>
+</div>
+
+<div class="panel">
+  <h1>🎮 Stream Panel</h1>
+
+  <div class="card">
+    <div class="card-title">🔴 Stream Off</div>
+    <button class="btn btn-red">📢 Poster Stream Off</button>
+  </div>
+</div>
+
+<script>
+const PANEL_PASSWORD = "1234";
+
+function checkPassword() {
+  const input = document.getElementById("password").value;
+
+  if (input === PANEL_PASSWORD) {
+    localStorage.setItem("panel_auth", "true");
+    document.getElementById("login-screen").style.display = "none";
+  } else {
+    document.getElementById("login-error").textContent = "❌ Mauvais mot de passe";
+  }
+}
+
+function checkAuth() {
+  if (localStorage.getItem("panel_auth") === "true") {
+    document.getElementById("login-screen").style.display = "none";
+  }
+}
+
+function logout() {
+  localStorage.removeItem("panel_auth");
+  location.reload();
+}
+
+checkAuth();
+</script>
+
+</body>
+</html>
