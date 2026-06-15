@@ -1,6 +1,12 @@
 # bot_template_2026
 Template for A discord bot connected to twitch api . 
 
+# INFORMATION 
+**AT THIS TIKE , THIS PROJECT WAS DEVLOPED TO BE AS A PRIVATE REPO **
+**IF YOU CLONE IT AND LET IT PUBLIC EVERYOKE CAN SEE SOME OF YOU ID **
+** ALL INPORTSNT TOKEN ARE STORED OK RENDER ON VARIABLE **
+** I AM WORKITN ON A SODE VERSION WHERE S WEB PANEL Generat YOU THE .ENV **
+
 ## Requirement
 - ` app on twitch` - creating your app on twitch appi . https://dev.twitch.tv
 - `Application Discord` : creating you app on discord at https://discord.com/developers/applications . 
