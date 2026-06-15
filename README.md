@@ -25,6 +25,6 @@ Template for A discord bot connected to twitch api .
 - `TWITCH_CHANNEL` : Twitch chanel your trying to watch , obtainable @ https://www.twitch.tv/**YOUR_ID**
 - `TWITCH_CLIENT_ID` :  client Tw
 - `TWITCH_CLIENT_SECRET` : your secret need to be generated on dev_twitch
--`RELAY_NOTIFICATIONS` : = true *if you want to also watch for later*
--`RELAY_TWITCH_CHANNEL`: 2nd channel to watch if you need back up or multi account *OPTIONAL*
+- `RELAY_NOTIFICATIONS` : = true *if you want to also watch for later*
+- `RELAY_TWITCH_CHANNEL`: 2nd channel to watch if you need back up or multi account *OPTIONAL*
 
