@@ -1,1 +1,4 @@
-.env
+# Ignore any local or staging variations
+*.env
+.env.*
+!.env.example
