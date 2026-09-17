@@ -12,12 +12,19 @@ Template for A discord bot connected to twitch api .
 - `$npm install` - build command
 - `$node bot.js` - start command 
 
-## Structure
+## Project Structure
 
-- `public/index` : webpages de l'application
-- `/bot.js` : bot code
-- `/package.json` : get depenency & info 
-
+```
+bot_template_2026
+├── public/
+│   └── index.html         # se-interface
+├── .env.example
+├── .gitignore
+├── LICENSE
+├── README.md
+├── Bot.js
+└── package.json
+```
 
 ### Render Environment / varribale  
 
