@@ -4,9 +4,10 @@ Template for A discord bot connected to twitch api .
 # INFORMATION 
 
 ## Requirement
-- ` app on twitch` - creating your app on twitch appi . https://dev.twitch.tv
-- `Application Discord` : creating you app on discord at https://discord.com/developers/applications . 
-- `Render service` web hoster -> set in a a webservice environment
+> [!IMPORTANT]
+> - `app on twitch` - creating your app on twitch appi . https://dev.twitch.tv
+> - `Application Discord` : creating you app on discord at https://discord.com/developers/applications .
+> - `Render service` web hoster -> set in a a webservice environment
 
 ## Command
 - `$npm install` - build command
